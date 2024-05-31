@@ -1,0 +1,278 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #cdaaaa;
+    color:#fff;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+    background: #ffffff;
+    padding:1rem 4rem ;
+    position: sticky;
+    top:0;
+    height: 80px;;
+}
+.logo h2{
+    font-size:40px;
+    color:red;
+/*    width:5rem;*/
+}
+.logo h2 hr{
+    color:blue;
+/*    width:1rem;*/
+}
+.logo span{
+    color:#000000;
+}
+li {
+    list-style: none;
+}
+nav ul{
+   
+    display: flex;
+    align-items: center;
+    gap:40px;
+
+}
+/* nav li{
+    padding:1rem;
+} */
+nav li a{
+    text-decoration: none;
+    color:#000000;
+    font-size: 18px;
+}
+.fa-bars{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-icon{
+    display: none;
+}
+nav ul li a::after{
+    content: '';
+    display:block;
+    width: 0;
+    height: 2px;
+    background:rgb(236, 175, 62);;
+    margin-right: 10px;
+    transition: 0.4s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+li a:hover{
+    color:rgb(236, 175, 62);
+}
+
+.hero-section{
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:100px 4rem;
+    padding-top: 100px;
+}
+.hero-section .left{
+    width: 50%;
+}
+.left h1{
+   font-size: 42px;
+}
+.left h1 span{
+    color:rgb(227, 27, 16);
+}
+.left p{
+    color:#888;
+    font-weight: 600;
+    padding-block:1.3rem;
+}
+
+.btn{
+    color:#fff;
+    font-weight: 700;
+    background-color: rgb(243, 22, 10);
+    padding:0.68rem;
+    border-radius: 10px;
+    margin-left:8rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color:rgb(189, 7, 7);
+}
+.hero-section .right{
+    width:50%;
+}
+.hero-section .right img{
+    width:100%;
+}
+
+        /* menu Section , our menu */
+
+
+        /* trending section  food*/
+
+
+
+
+            /* Customer Reviews */
+#testimonialSection{
+    padding:100px 4rem;
+    background-color: #E5EFF6;
+}
+
+#testimonialSection h1{
+    text-align: center;
+    font-size: 28px;
+    color:#000000;
+}
+.testimonial-container{
+    padding:60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:40px;
+
+}
+.testimonial-container .testimonial{
+    width:320px;
+    padding:20px;
+    background-color: #fff;
+    text-align: center;
+    color: #000000;
+    border-radius: 15px;
+}
+.testimonial img{
+    width:70px;
+    height:70px;
+    /* object-fit:cover; */
+    border-radius: 50%;
+    margin-top:1rem;
+}
+.testimonial p{
+    padding-top:20px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+            /* blogsection */
+
+
+
+            /* footer */
+footer{
+    padding:80px 4rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    background-color: #D0D2DC;
+    color:#000000;
+    flex-wrap: wrap;
+    gap:30px;
+}
+.col h3{
+    font-weight: 700;
+    padding-bottom: 20px;
+
+}
+footer .logo hr{
+    width:50%;
+
+
+}
+footer .logo i{
+    margin-right:1rem;
+}
+.col input{
+    font-size: 15px;
+    line-height: 25px;
+    color: #000000;
+    margin-top:1rem;
+
+}
+.col-1{
+    width:300px;
+}
+
+.col li{
+    padding-bottom:6px;
+    color:#000000;
+}
+
+.copyright{
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 13px;
+    background-color: #D0D2DC;
+    color:#000000;
+}
+
+
+            /* media query */
+
+ @media(max-width:840px){
+    nav ul{
+        position:absolute;
+        top:80px;
+        left:0;
+        right:0;
+        background-color: #ffffff;
+        color:#000000;
+        flex-direction:column;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+            /* li ka last ancer tag is the last chiled  */
+
+    nav ul li:last-child{    
+        padding-bottom:40px;
+    }
+
+    .menu-icon{
+        display:block;
+    }
+    .hero-section{
+        flex-direction:column;
+        height:auto;
+        padding-top:40px;
+        padding-bottom:0;
+    }
+
+    .hero-section .left, .hero-section .right{
+        width:100%;
+    }
+    #heroSection,#menuSection,#testimonialSection,#trendSection{
+        padding:40px 2rem;
+        padding-top:80px;
+    }
+    nav{
+        padding:1rem 2rem;
+    }
+}
+
+@media (max-width:500px) {
+    .hero-section .left h1{
+        font-size: 30px;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 0;
+    }
+} 
